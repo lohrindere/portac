@@ -1,0 +1,96 @@
+body{
+  position: relative;
+  margin: 0;
+  color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("img/bg.gif");
+  font-family: 'VT323', monospace;
+  height: 99%;
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page-header {
+  margin-left: 10px ;
+  padding: 20px 0;
+
+}
+.page-header a {
+  position: relative;
+  margin-right: 5px;
+  padding-bottom: 10px;
+  padding-top: 9px;
+  font-weight: 500;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: left;
+  color: inherit;
+}
+
+.page-header a:focus,
+.page-header a:hover {
+  color: #ffc0cb;
+}
+.header-github {
+  padding-left: 23px;
+  background-image: url("img/github.png");
+}
+.header-telega {
+  padding-left: 23px;
+  background-image: url("img/telegram.png");
+}
+
+.header-donate {
+  padding-left: 23px;
+  background-image: url("img/donate.png")
+}
+
+}
+.page-header a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffc0cb;
+  transition: width 200ms;
+}
+
+
+
+.page-header a:hover::after{
+  width: 100%;
+}
+
+.maintext .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.maintext p {
+  z-index: 1;
+  order: 1;
+  margin: 0;
+  padding: 0px 0;
+  padding-bottom: 16px;
+  font-size: 32px;
+  line-height: 48px;
+  color: #ffc0cb;
+}
+
+.heading {
+  z-index: 1;
+  order: 2;
+  margin: 0 00 0 -10px;
+  width: 815px;
+  font-size: 96px;
+  line-height: 55px;
+  font-weight: 500;
+  color: white;
+}
