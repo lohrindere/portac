@@ -1,29 +1,70 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/bg.gif">
-    <title>𝕝𝕠𝕙𝕣𝕚𝕟𝕕𝕖𝕣𝕖</title>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="page-header">
-          <a href = "https://t.me/lohrindere" target="_blank" class = "header-telega" > t.me/lohrindere </a>
-          <a href="https://github.com/lohrindere" target="_blank" class = "header-github" > Github </a>
-          <a href="https://qiwi.com/payment/form/99999?extra[%27accountType%27]=nickname&extra[%27account%27]=LOHRINDERE" target="_blank" class="header-donate">donate</a>
-    </header>
-    <section class="maintext">
-      <div class="container">
-      <h1 class="heading"> Rindere </h1>
-      <p> HTML coder </p>
-      </div>
-    </section>
-    <audio src="https://puu.sh/I6l6b/33670e70d9.mp3" autoplay loop id = volumedown>
-    </audio>
-    <script>
-      var downaudio = document.getElementById("volumedown");
-      downaudio.volume = 0.2;
-</script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Убегающая кнопка</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+	  background: url('https://pa1.aminoapps.com/6377/70cf354af2ecd9410458422e5d7f92a95d23f45d_00.gif') fixed;
+    }
+
+    .runawayButton {
+      position: absolute;
+      width: 500px;
+      height: 200px;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #runawayButton1 {
+      background-color: green;
+      animation: runawayAnimation 2s infinite alternate;
+    }
+
+    @keyframes runawayAnimation {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(200px, 200px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <button id="runawayButton1" class="runawayButton">TAMAMA FEETS</button>
+
+  <script>
+    // Создаем вторую кнопку через 5 секунд
+    setTimeout(function() {
+      var button2 = document.createElement('button');
+      button2.id = 'runawayButton2';
+      button2.className = 'runawayButton';
+      button2.textContent = 'Click me';
+      document.body.appendChild(button2);
+
+      // Показываем вторую кнопку по центру экрана
+      button2.style.left = (window.innerWidth / 2 - 50) + 'px';
+      button2.style.top = (window.innerHeight / 2 - 25) + 'px';
+
+      // Добавляем обработчик события для перенаправления на другой сайт при нажатии второй кнопки
+      button2.addEventListener('click', function() {
+        window.location.href = 'https://www.example.com'; // Замените ссылку на нужную
+      });
+    }, 5000);
+	
+
+    // Добавляем обработчик события на движение мыши для первой кнопки
+    document.getElementById('runawayButton1').addEventListener('mousemove', function() {
+      var newX = Math.floor(Math.random() * window.innerWidth);
+      var newY = Math.floor(Math.random() * window.innerHeight);
+      this.style.left = newX + 'px';
+      this.style.top = newY + 'px';
+    });
+  </script>
+</body>
 </html>
