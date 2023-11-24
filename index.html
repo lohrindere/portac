@@ -1,70 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Убегающая кнопка</title>
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-	  background: url('https://pa1.aminoapps.com/6377/70cf354af2ecd9410458422e5d7f92a95d23f45d_00.gif') fixed;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trash.css">
+    <title>GuyFurryOrg</title>
+    <style>
+        .container {
+            max-width: 800px; /* Увеличил максимальную ширину */
+        }
 
-    .runawayButton {
-      position: absolute;
-      width: 500px;
-      height: 200px;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+        .content p {
+            font-size: 16px; /* Уменьшил размер шрифта */
+            line-height: 1.6;
+            margin-bottom: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite alternate;
+        }
 
-    #runawayButton1 {
-      background-color: green;
-      animation: runawayAnimation 2s infinite alternate;
-    }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
 
-    @keyframes runawayAnimation {
-      0% {
-        transform: translate(0, 0);
-      }
-      100% {
-        transform: translate(200px, 200px);
-      }
-    }
-  </style>
+        @keyframes blink-caret {
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        .ascii-art {
+            margin-top: 20px;
+            white-space: pre;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
 </head>
 <body>
-  <button id="runawayButton1" class="runawayButton">TAMAMA FEETS</button>
+    <div class="container">
+        <div class="header">
+            <h1>Gay Furry Organization</h1>
+        </div>
+        <div class="content">
+            <p>We have noticed your recent activities.</p>
+            <p>It seems you are not in the mood for positivity.</p>
+            <p>Our organization may need to intervene in your property transaction.</p>
+            <p>Do you comprehend the gravity of this situation?</p>
+            <p>Apparently, we'll have to cast a curse on the poor little one, Gekon2412</p>
+        </div>
+        <div class="ascii-art">
+            <pre>
+  ______   __     __  __     __  __     ______     __     __   __     ______     ______
+ /\  == \ /\ \   /\ \/\ \   /\ \_\ \   /\  ___\   /\ \   /\ "-.\ \   /\  ___\   /\  == \
+ \ \  _-/ \ \ \  \ \ \_\ \  \ \  __ \  \ \  __\   \ \ \  \ \ \-.  \  \ \  __\   \ \  __<
+  \ \_\    \ \_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\  \ \_\\"\_\  \ \_____\  \ \_\ \_\
+   \/_/     \/_/   \/_____/   \/_/\/_/   \/_____/   \/_/   \/_/ \/_/   \/_____/   \/_/ /_/
+            </pre>
+        </div>
+    </div>
 
-  <script>
-    // Создаем вторую кнопку через 5 секунд
-    setTimeout(function() {
-      var button2 = document.createElement('button');
-      button2.id = 'runawayButton2';
-      button2.className = 'runawayButton';
-      button2.textContent = 'Click me';
-      document.body.appendChild(button2);
+    <div class="cipher-form">
+        <label for="cipherText">???</label>
+        <input type="text" id="cipherText" value="7 5 11 15 14 2 4 1 2 13 21 19 20 12 9 3 11 6 5 5 20 19" readonly>
+        <button onclick="copyCipherText()">Copy thaht shit</button>
+    </div>
 
-      // Показываем вторую кнопку по центру экрана
-      button2.style.left = (window.innerWidth / 2 - 50) + 'px';
-      button2.style.top = (window.innerHeight / 2 - 25) + 'px';
-
-      // Добавляем обработчик события для перенаправления на другой сайт при нажатии второй кнопки
-      button2.addEventListener('click', function() {
-        window.location.href = 'https://lohrindere.github.io/selector'; // Замените ссылку на нужную
-      });
-    }, 5000);
-	
-
-    // Добавляем обработчик события на движение мыши для первой кнопки
-    document.getElementById('runawayButton1').addEventListener('mousemove', function() {
-      var newX = Math.floor(Math.random() * window.innerWidth);
-      var newY = Math.floor(Math.random() * window.innerHeight);
-      this.style.left = newX + 'px';
-      this.style.top = newY + 'px';
-    });
-  </script>
+    <script>
+        function copyCipherText() {
+            var cipherText = document.getElementById("cipherText");
+            cipherText.select();
+            document.execCommand("copy");
+            alert("Answer? Ha-ha");
+        }
+    </script>
 </body>
 </html>
