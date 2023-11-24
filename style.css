@@ -1,96 +1,48 @@
-body{
-  position: relative;
-  margin: 0;
-  color: #f2f2f2;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("img/bg.gif");
-  font-family: 'VT323', monospace;
-  height: 99%;
+body {
+    background: url('https://media.tenor.com/KoGb1Xgdxx0AAAAd/hacker-ascii.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .container {
-  max-width: 2000px;
-  margin: 0 auto;
-  padding: 0 16px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
 }
 
-.page-header {
-  margin-left: 10px ;
-  padding: 20px 0;
-
-}
-.page-header a {
-  position: relative;
-  margin-right: 5px;
-  padding-bottom: 10px;
-  padding-top: 9px;
-  font-weight: 500;
-  text-decoration: none;
-  background-repeat: no-repeat;
-  background-position: left;
-  color: inherit;
+.header {
+    position: relative;
 }
 
-.page-header a:focus,
-.page-header a:hover {
-  color: #ffc0cb;
-}
-.header-github {
-  padding-left: 23px;
-  background-image: url("img/github.png");
-}
-.header-telega {
-  padding-left: 23px;
-  background-image: url("img/telegram.png");
+.logo {
+    max-width: 100px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.header-donate {
-  padding-left: 23px;
-  background-image: url("img/donate.png")
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-}
-.page-header a::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #ffc0cb;
-  transition: width 200ms;
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-
-
-.page-header a:hover::after{
-  width: 100%;
-}
-
-.maintext .container {
-  display: flex;
-  flex-direction: column;
-}
-
-.maintext p {
-  z-index: 1;
-  order: 1;
-  margin: 0;
-  padding: 0px 0;
-  padding-bottom: 16px;
-  font-size: 32px;
-  line-height: 48px;
-  color: #ffc0cb;
-}
-
-.heading {
-  z-index: 1;
-  order: 2;
-  margin: 0 00 0 -10px;
-  width: 815px;
-  font-size: 96px;
-  line-height: 55px;
-  font-weight: 500;
-  color: white;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
